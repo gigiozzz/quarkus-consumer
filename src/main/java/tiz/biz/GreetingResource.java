@@ -27,4 +27,12 @@ public class GreetingResource {
         return service. getMultipart().text;
     }
 
+    @GET
+    @Path("/multipart-post")
+    @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    public String getMultipartPost() {
+        return service.getMultipartPost("gigi").text;
+    }
+
 }
